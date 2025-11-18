@@ -77,3 +77,7 @@ name {
 span.highlight {
   background-color: #ffffd0;
 }
+
+p {
+  margin-top: 0;
+}
