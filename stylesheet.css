@@ -31,34 +31,16 @@ a:hover {
 }
 
 .name {
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 400;
-  margin: 0 0 4px 0;
-}
-
-.subtitle {
-  font-size: 15px;
-  margin: 0 0 12px 0;
+  margin: 0 0 14px 0;
+  line-height: 1.2;
 }
 
 .profile-photo {
   width: 100%;
-  max-width: 220px;
-  border-radius: 8px;
-}
-
-.links {
-  margin-top: 14px;
-  font-size: 15px;
-}
-
-.links a {
-  white-space: nowrap;
-  margin-right: 6px;
-}
-
-.links i {
-  margin-right: 5px;
+  max-width: 280px;
+  border-radius: 6px;
 }
 
 hr {
