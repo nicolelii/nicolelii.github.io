@@ -1,14 +1,70 @@
-/* Adapted from Jon Barron's website template:
-   https://github.com/jonbarron/jonbarron.github.io */
+/* This stylesheet is the verbatim source from Jon Barron's website template:
+   https://github.com/jonbarron/jonbarron_website
+   Additions by this site are marked in the "SITE ADDITIONS" block at the end. */
 
-body {
-  margin: 0px;
-  color: #000;
-  background-color: #fff;
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 1.6;
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAUi-qNiXg7eU0.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_FQftx9897sxZ.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 a {
@@ -22,64 +78,91 @@ a:hover {
   text-decoration: none;
 }
 
-.container {
-  width: 100%;
-  max-width: 800px;
-  margin: auto;
-  padding: 24px 20px 40px 20px;
-  box-sizing: border-box;
+body,
+td,
+th,
+tr,
+p,
+a {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+strong {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+h2 {
+  margin: 0;
+  font-weight: normal;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 22px;
+}
+
+.papertitle {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .name {
-  font-size: 40px;
-  font-weight: 400;
-  margin: 0 0 14px 0;
-  line-height: 1.2;
+  padding-top: 20px;
+  margin: 0;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 32px;
 }
 
-.profile-photo {
-  width: 100%;
-  max-width: 280px;
-  border-radius: 6px;
+.one {
+  width: 160px;
+  height: 160px;
+  position: relative;
 }
 
-hr {
-  border: 0;
-  border-top: 1px solid #ddd;
-  margin: 28px 0 20px 0;
+.two {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
 }
 
-.footer {
-  font-size: 12px;
-  color: #888;
-  text-align: center;
-  margin-top: 40px;
+.fade {
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
 }
 
-.footer a {
-  color: #888;
+span.highlight {
+  background-color: #ffffd0;
 }
 
-.footer a:hover {
-  color: #f09228;
+.colored-box {
+    color: black;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 10px;
 }
 
-/* Stack columns on narrow screens */
+/* ============================================================
+   SITE ADDITIONS (not part of the original Barron template)
+   Small mobile-stacking rule so the two-column header collapses
+   on narrow screens. The original template is desktop-oriented.
+   ============================================================ */
 @media (max-width: 600px) {
-  .layout,
-  .layout tbody,
-  .layout tr,
-  .layout td {
-    display: block;
+  .profile-td,
+  .bio-td,
+  .thumb-td,
+  .paper-td {
+    display: block !important;
     width: 100% !important;
+    box-sizing: border-box;
   }
-
-  .photo-cell {
+  .profile-td {
     text-align: center;
-    padding-bottom: 16px;
   }
-
-  .profile-photo {
-    max-width: 180px;
+  .profile-td img {
+    max-width: 200px !important;
   }
 }
